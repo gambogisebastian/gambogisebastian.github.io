@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Título</title>
+        <style>
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .barra {
+                background-color: #ddd;
+                height: 100%;
+                width: 300px;
+                position: absolute;
+                transition: all .2s linear;
+                /*left: -300px;*/
+            }
+            nav {
+                font-size: 20px;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+            }
+            .area {
+                border: 2px solid #ddd;
+                background-color: #eee;
+                padding: 4px;
+            }
+            .sub-area {
+                display: none;
+                text-indent: 25px;
+            }
+            .btn-abajo {
+                display: none;
+            }
+            .btn-abajo-sub {
+                display: none;
+            }
+            .btn-abajo:checked ~ .sub-area {
+                display: block;
+            }
+            label {
+                display: block;
+            }
+            .sub-sub-area {
+                display: none;
+            }
+            .btn-abajo-sub:checked ~ .sub-sub-area{
+                display: block;
+                text-indent: 50px;
+            }
+            .link {
+                text-decoration: none; 
+                background-color: #eee;
+                transition: all .2s linear;
+                color: black;
+            }
+            .link:hover {
+                color: palevioletred;
+                background-color: aquamarine;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <div class="barra">
+            <nav>
+                <div class="area">
+                    <label for="tit-area1">Titulo del area 1</label>
+                    <input type="checkbox" class="btn-abajo" id="tit-area1">
+                    <div class="sub-area">
+                        <div><a class="link" href="#">Lorem ipsum dolor sit.</a></div>
+                        <input type="checkbox" class="btn-abajo-sub" id="tit-ssarea1">
+                        <label for="tit-ssarea1">Menú terceros</label>
+                        <div class="sub-sub-area">
+                            <div><a class="link" href="#">Link a algun sector</a></div>
+                            <div><a class="link" href="#">En la página</a></div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="area">
+                    <label for="tit-area2">Titulo del area 2</label>
+                    <input type="checkbox" class="btn-abajo" id="tit-area2">
+                    <div class="sub-area">
+                        <ul>
+                            <li><a class="link" href="#">Link a algun sector</a></li>
+                            <li>Item-F</li>
+                            <li>Item-G</li>
+                            <li>Item-H</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="area">
+                    <label for="tit-area3">Titulo del area 3</label>
+                    <input type="checkbox" class="btn-abajo" id="tit-area3">
+                    <div class="sub-area">
+                        <a class="link" href="#">Item-I</a>
+                        <a class="link" href="#">Item-J</a>
+                        <a class="link" href="#">Item-K</a>
+                        <a class="link" href="#">Item-L</a>
+                    </div>
+                </div>
+                <div class="area">
+                    <label for="tit-area4">Titulo del area 4</label>
+                    <input type="checkbox" class="btn-abajo" id="tit-area4">
+                    <div class="sub-area">
+                        <ol>
+                            <li>Item-I</li>
+                            <li>Item-J</li>
+                            <li>Item-K</li>
+                            <li>Item-L</li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>
