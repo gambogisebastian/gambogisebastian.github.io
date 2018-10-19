@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <title>Landing Page X</title>
+
+
+    <style>
+    body {
+      font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+      text-align: center;
+    }
+
+    .topnav {
+      position: fixed;
+      border: solid greenyellow 1px;
+      width: 100%;
+      color: #424242;
+      background-color: slategray;
+
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav {
+        font-size: 6px;
+        height: 40px;
+      }
+      #video {
+        width: 100%;
+      }
+    }
+
+    .topnav a {
+      color: #f2f2f2;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: lightgreen;
+      color: black;
+    }
+    
+    .imgicon {
+      float: left;
+      margin: 0;
+    }
+
+    .main {
+      padding-top: 80px;
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .contenedor {
+      display: flex;
+      justify-content: space-around;
+
+    }
+
+    .tabla {
+      text-align: left
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <header id="header">
+      <nav id="nav-bar" class="topnav">
+        <a class="active" href="#form">Inicio</a>
+        <a id="nav-link" href="#news">Novedades</a>
+        <a id="nav-link" href="#video">Muestra</a>
+        <a id="nav-link" href="#price">Precios</a>
+        <img id="header-img" class="imgicon" width="100px" height="65px" src="https://lh3.googleusercontent.com/wks7e9-idSTo_XaaKf_fnXyZUYXxJ3TUNMI66DjPGRm-Z3jqfqyZSwxtFZa5HKRTQAPpBj1BqKjx981gek0aNMHQSjqZQXRnXTEy3H1eDz1llrClEvqIr09x_qLyvxNCl7YaLur2fyW1j9uR6WYOC1FJ8aRCn7mna4lGdwPBXSinqKlSAy_2YE0wbrNOh6NAeDgnM7QNEd6fjX4rwXlLwy9UvDUtgL0RmMEjpMHCIveFnKMpn3N_CxR9q-2ayjMrWTEQ1PrzG7fMO6YDtBHCybYjbAFHxUt_hfB6epFUajq6L6ytnEMzlrl6foM1BVa8MXCdrk-sYIopK6tCQuAnLR3PqGITjfzYR8pNksecST-ajKEYxCtaFmkoxf7TE7R2H_dCKx0vyIIHFQ0LscbkjqsuYWQ2084a3W7K128-g6AT9eYo4rgQLE_87WLSUBcz6PxuQvPTH4IJ6mvxwJc4q2ItOcVqu3WSW-keJG_fwarJbwXGasHvNuNIWYQpLzgkHKsjPHc3adLHBv1VeE8isxXjR3L9lQq_KQfMYRxe2KWvgwFY45zFwVtewYmZMxqYrGdo2o37SpDp7udNyt9a5brpvhcWEcwGk8msVNtS3zoqQzqPuUdyD_yUwBRyPKUP7MV3GL-k54nbIUbnnvgOpO9FQG2lMMUArE8uChdl-0ryo2Q0-PdAUd1r=w960-h540-no" alt="logo">
+      </nav>
+    </header>
+    <div class="main">
+      <h1>Músico-programador independiente</h1>
+      <br>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input id="email" type="email" name="email" autocomplete="off" required placeholder="suscríbete con tu e-mail" size="60">
+        <input id="submit" type="submit">
+      </form>
+      <br>
+
+      <div id="news">
+        <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis perspiciatis, animi laudantium molestias aliquid ex maiores ut repellat facere nostrum deleniti fugit enim incidunt suscipit cum, natus illo ipsa nemo.
+        </p>
+      </div>
+
+
+      <br>
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/40UImP_4TAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/channel/UCGZ0hdAa39pH-oihber-puQ" target="_blank">Más música</a>
+      <br>
+      <div id="price" class="contenedor">
+        <div class="tabla">
+          <ul>
+            <li>Técnico informático</li>
+            <li>Diseñador gráfico</li>
+            <li>Músico guitarrista</li>
+            <li>Filósofo autodidacta</li>
+          </ul>
+        </div>
+        <div class="tabla">
+          <ul>
+            <li>Técnico informático</li>
+            <li>Diseñador gráfico</li>
+            <li>Músico guitarrista</li>
+            <li>Filósofo autodidacta</li>
+          </ul>
+        </div>
+        <div class="tabla">
+          <ul>
+            <li>Técnico informático</li>
+            <li>Diseñador gráfico</li>
+            <li>Músico guitarrista</li>
+            <li>Filósofo autodidacta</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+        <p>Para comunicarse con este excelente programusician envíe un e-mail <a href="#form">aquí</a>  </p>
+      </footer>
+    </div>
+  </body>
+</html>
