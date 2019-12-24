@@ -1,124 +1,143 @@
-<!doctype html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Título</title>
-        <style>
+<html>
+<head>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the sup */
+    .sup {
+      grid-area: sup;
+      background-color: #efe;
+      padding: 15px;
+      font-size: 25px;
+    }
+    
+    /* The grid container */
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+        'sup sup sup sup sup sup' 
+        'sec det det det det det' 
+        'pie pie pie pie pie pie';
+      /* grid-column-gap: 10px; - if you want gap between the columns */
+    } 
+    
+    .sec,
+    .det {
+      margin: 5px;
+      padding: 10px;
+      height: 600px; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Style the sec column */
+    .sec {
+      grid-area: sec;
+    }
+    
+    /* Style the der column */
+    .det {
+      grid-area: det;
+    }    
+    
+    /* Style the pie */
+    .pie {
+      grid-area: pie;
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+    }
 
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            .barra {
-                background-color: #ddd;
-                height: 100%;
-                width: 300px;
-                position: absolute;
-                transition: all .2s linear;
-                /*left: -300px;*/
-            }
-            nav {
-                font-size: 20px;
-                width: 100%;
-                position: absolute;
-                top: 60px;
-            }
-            .area {
-                border: 2px solid #ddd;
-                background-color: #eee;
-                padding: 4px;
-            }
-            .sub-area {
-                display: none;
-                text-indent: 25px;
-            }
-            .btn-abajo {
-                display: none;
-            }
-            .btn-abajo-sub {
-                display: none;
-            }
-            .btn-abajo:checked ~ .sub-area {
-                display: block;
-            }
-            label {
-                display: block;
-            }
-            .sub-sub-area {
-                display: none;
-            }
-            .btn-abajo-sub:checked ~ .sub-sub-area{
-                display: block;
-                text-indent: 50px;
-            }
-            .link {
-                text-decoration: none; 
-                background-color: #eee;
-                transition: all .2s linear;
-                color: black;
-            }
-            .link:hover {
-                color: palevioletred;
-                background-color: aquamarine;
-            }
+    /* el sup responsible */
+    .logo {
+      float: left;
+    }
+    .logo a {
+      color: #777;
+      font-size: 18px;
+      padding: 12px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .logo a:hover {
+      background-color: aqua;
+    }
+    .menu {
+      float: right;
+    }
+    
+    .boton-de-link {
+      background-color: #ddd;
+      color: #000;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px; 
+      line-height: 25px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+    .boton-de-link:hover {
+      background-color: #eee;
+    }
 
 
-            
-        </style>
-    </head>
-    <body>
-        <div class="barra">
-            <nav>
-                <div class="area">
-                    <label for="tit-area1">Titulo del area 1</label>
-                    <input type="checkbox" class="btn-abajo" id="tit-area1">
-                    <div class="sub-area">
-                        <div><a class="link" href="../portafolio/index.html">Portafolio</a></div>
-                        <input type="checkbox" class="btn-abajo-sub" id="tit-ssarea1">
-                        <label for="tit-ssarea1">Menú terceros</label>
-                        <div class="sub-sub-area">
-                            <div><a class="link" href="freecodecamp_ex/technical_data.html">Technical data</a></div>
-                            <div><a class="link" href="#">En la página</a></div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="area">
-                    <label for="tit-area2">Titulo del area 2</label>
-                    <input type="checkbox" class="btn-abajo" id="tit-area2">
-                    <div class="sub-area">
-                        <ul>
-                            <li><a class="link" href="grid3.html">Link a test grid3</a></li>
-                            <li>Item-F</li>
-                            <li>Item-G</li>
-                            <li>Item-H</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="area">
-                    <label for="tit-area3">Titulo del area 3</label>
-                    <input type="checkbox" class="btn-abajo" id="tit-area3">
-                    <div class="sub-area">
-                        <a class="link" href="#">Item-I</a>
-                        <a class="link" href="#">Item-J</a>
-                        <a class="link" href="#">Item-K</a>
-                        <a class="link" href="#">Item-L</a>
-                    </div>
-                </div>
-                <div class="area">
-                    <label for="tit-area4">Titulo del area 4</label>
-                    <input type="checkbox" class="btn-abajo" id="tit-area4">
-                    <div class="sub-area">
-                        <ol>
-                            <li>Item-I</li>
-                            <li>Item-J</li>
-                            <li>Item-K</li>
-                            <li>Item-L</li>
-                        </ol>
-                    </div>
-                </div>
-            </nav>
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      .grid-container  {
+        grid-template-areas: 
+          'sup sup sup sup sup sup' 
+          'det det det det det det' 
+          'sec sec sec sec sec sec' 
+          'pie pie pie pie pie pie';
+      }
+      .sec,
+      .der {
+        padding: 10px;
+        height: 300px; /* Should be removed. Only for demonstration */
+      }
+      .sup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .logo a {
+        font-size: 0em;
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+      <div class="sup">
+        <div class="logo">
+          <a href="#raiz" >Logo</a>
         </div>
-    </body>
+        <div class="menu">
+          <a class="boton-de-link" href="#inicio">Incio</a>
+          <a class="boton-de-link" href="#contactos">Contactos</a>
+          <a class="boton-de-link" href="#configuracion">Configuración</a>
+        </div>    
+      </div>
+      
+      <div class="sec" style="background-color:#fee;">Menú Secundario</div>
+      <div class="det">Detalle</div>  
+     
+      
+      <div class="pie">
+        <p>pie</p>
+      </div>
+    </div>    
+</body>
 </html>
